@@ -81,6 +81,3 @@ The UI library implements a cosmic-themed design system with the following chara
 - Responsive design that works on all screen sizes
 - Consistent spacing and typography
 
-## License
-
-MIT
