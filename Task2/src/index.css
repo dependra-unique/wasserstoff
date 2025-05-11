@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #8b5cf6;
+  --primary-light: #a78bfa;
+  --primary-dark: #7c3aed;
+  --secondary: #ec4899;
+  --accent: #f97316;
+  --background: #0f0f29;
+  --card-bg: rgba(30, 27, 75, 0.7);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-accent: #f97316;
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Orbit animations */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+
+.orbit-animation {
+  animation: orbit 15s linear infinite;
+}
+
+.orbit-animation-reverse {
+  animation: orbit 20s linear infinite reverse;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Form animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease forwards;
+}
